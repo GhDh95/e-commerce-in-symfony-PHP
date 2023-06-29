@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Course{% endblock %}
+
+{% block body %}
+    {% include 'components/Banner.html.twig' with{'title': course.title} %}
+    <div class="max-w-7xl mx-auto flex flex-col items-center">
+        <img class="img-fluid" src="{{ asset('images/Choosing-an-Oxford-course.jpg') }}" alt="">
+        <div class="flex flex-col items-center max-w-md">
+            <p class="text-2xl text-gray-700">Course : {{ course.title }}</p>
+            <p class="text-gray-500">Course Description: {{ course.description }}</p>
+        </div>
+
+
+    </div>
+
+    <div class=" flex flex-col items-center max-w-7xl mx-auto mt-20">
+        <a href="https://www.youtube.com/watch?v=r594pxUjcz4&pp=ygUVaW4gYSBzZW50aW1lbnRhbCBtb29k">
+            Lesson 1
+        </a>
+        <a href="https://www.youtube.com/watch?v=zqNTltOGh5c&pp=ygULbWlsZXMgZGF2aXM%3D">
+            Lesson 2
+        </a>
+        <a href="">
+
+        </a>
+        <a href="">
+
+        </a>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+
+    {% include 'components/Banner.html.twig' with{'title': 'Join us'} %}
+
+    {{ form_errors(registrationForm )}}
+
+    {{ form_start(registrationForm ,{'attr': {'class': 'border border-black w-full max-w-lg mx-auto flex flex-col  justify-center items-center'}} ) }}
+    {{ form_row(registrationForm.email, {
+        'attr': {
+            'class': 'border border-black rounded-md w-full',
+        },
+        'label_attr': {
+            'class': 'text-red-500'
+        },
+        'label': 'email'
+    }) }}
+    {{ form_row(registrationForm.plainPassword, {
+        'attr': {
+            'class': 'border border-black rounded-md w-full ',
+        },
+        'label_attr': {
+            'style': 'display: block;',
+            'class': 'text-red-500'
+
+        },
+        'label': 'password'
+    }) }}
+    <button type="submit" class="hover:underline bg-purple-500 my-2">Register</button>
+    <a class="hover:underline" href="/login">have an account ?</a>
+    {{ form_end(registrationForm) }}
+
+
+{% endblock %}
+
+

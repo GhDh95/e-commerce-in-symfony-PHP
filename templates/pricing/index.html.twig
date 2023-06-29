@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PricingController!{% endblock %}
+
+{% block body %}
+    {% include 'components/Banner.html.twig' with{'title' : 'Choose a Plan'} %}
+    <div class="grid grid-cols-1 md:grid md:grid-cols-2 place-items-center mt-10 md:max-w-2xl md:mx-auto">
+        {% for offer in offers %}
+            {% include 'components/Pricing_Card.html.twig' with{'offer': offer} %}
+        {% endfor %}
+    </div>
+{% endblock %}

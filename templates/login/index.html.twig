@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Login{% endblock %}
+
+{% block body %}
+
+    {% include 'components/Banner.html.twig' with{'title' : 'Welcome Back'} %}
+
+    <form action="{{ path('app_login') }}" method="post" class="flex flex-col max-w-lg mx-auto border border-black p-2 mt-20">
+        <label class="text-red-500" for="username">Email:</label>
+        <input class="border border-black rounded-md" type="text" id="username" name="_username" value="{{ last_username }}">
+
+        <label class="text-red-500" for="password">Password:</label>
+        <input class="border border-black rounded-md" type="password" id="password" name="_password">
+
+        <button class="hover:underline bg-purple-500 my-2 w-fit self-center" type="submit">login</button>
+        <a class="hover:underline" href="/register">new Here ? register!</a>
+
+        {% if error %}
+            <p class="text-md font-semibold text-red-500">{{ error.message}}</p>
+        {% endif %}
+    </form>
+{% endblock %}

@@ -4,6 +4,12 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link href="https://fonts.cdnfonts.com/css/terminal" rel="stylesheet">
+
+
+        <script src="https://www.paypal.com/sdk/js?client-id=AdAHAPOQWk6BoJHBGZZA_humRrYZhzWVJJZAxS0ft6GbbAus1PGZPXIyCtIpaHfUmX30BPFbc4IgVY6V"></script>
         {% block stylesheets %}
         {% endblock %}
 
@@ -11,6 +17,16 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <div class="p-2">
+            {% include 'components/Navbar.html.twig' %}
+            {% block body %}{% endblock %}
+        </div>
     </body>
+
+    <style>
+        body{
+            font-family: 'Terminal', sans-serif;
+            background-color: #FAF9F6;
+        }
+    </style>
 </html>

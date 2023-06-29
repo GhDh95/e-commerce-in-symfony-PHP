@@ -1,0 +1,22 @@
+<div class="relative rounded-lg h-fit w-fit hover:scale-110  hover:transition hover:ease-in-out ">
+    <img class="w-[300px] h-[600px] object-cover rounded-lg" src="{{ asset('images/flat-design-young-girl-programmer-working_23-2148267156.avif') }}" alt="">
+    <div class="absolute inset-0 flex flex-col items-center py-4">
+        <div class="bg h-full py-2 grid grid-cols-1 place-items-center">
+            <p class="text-2xl">{{ offer.type }} Subscription</p>
+            <p class="h-fit w-fit px-2 py-1 text-black bg-orange-300 font-semibold">Price {{ offer.price }}$</p>
+            <a class=" h-fit w-fit bg-black px-2 py-1 text-white hover:opacity-75" href="/checkout/{{ offer.id }}">Get Access</a>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    div.bg{
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+</style>

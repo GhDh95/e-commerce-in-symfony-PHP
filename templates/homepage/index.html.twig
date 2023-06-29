@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomepageController!{% endblock %}
+
+{% block body %}
+
+    <div class="flex justify-center relative mt-10 md:mt-0">
+        <img class="img-fluid" src="{{ asset('images/1.png') }}" alt="main image">
+        <div id="ff" class=" h-32 absolute flex flex-col justify-center items-center">
+            <p class="text-2xl">Browse our Courses!</p>
+            <p class="text-gray-800">We have the best courses available</p>
+            <a id="qq" class="px-2" href="/courses">Shop</a>
+        </div>
+    </div>
+
+
+    <style>
+        img {
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(2.5px);
+            -webkit-backdrop-filter: blur(2.5px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        #ff {
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(2.5px);
+            -webkit-backdrop-filter: blur(2.5px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 300px;
+        }
+        a#qq{
+            background: rgba(62, 67, 208, 0.51);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5.4px);
+            -webkit-backdrop-filter: blur(5.4px);
+            border: 1px solid rgba(62, 67, 208, 0.3);
+        }
+    </style>
+{% endblock %}

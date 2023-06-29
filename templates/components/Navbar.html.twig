@@ -1,0 +1,20 @@
+<div class="grid md:grid-cols-6 px-2 border-b-2 border-black pb-2 gap-y-2 md:gap-y-0">
+    <div class=" md:col-span-4 grid md:grid-cols-2">
+        <a class="text-3xl" href="/">Homepage</a>
+        <form action="{{ path('app_courses') }}">
+            <input placeholder="Search courses by name.. " class=" px-2 py-1 border border-black" type="text" name="search">
+            <button class="border border-black px-2 py-1 hover:bg-black hover:text-white" type="submit">Search</button>
+        </form>
+    </div>
+    <div class="grid grid-cols-2  h-full md:col-span-2 items-center">
+        {% if app.user %}
+            <form action="{{ path('app_logout') }}" method="post">
+                <button class="border border-black bg-orange-500 text-indigo-800 px-2 py-1 hover:bg-green-400 text-center w-full" type="submit">Logout</button>
+            </form>
+        {% else %}
+            <a class="border border-black bg-orange-500 text-indigo-800 px-2 py-1 hover:bg-green-400 text-center " href="{{ path('app_login') }}">Login</a>
+
+        {% endif %}
+        <a class="border border-black bg-indigo-500 text-orange-700 px-2 py-1 hover:bg-green-400 text-center" href="{{ path('app_pricing') }}">Pricing</a>
+    </div>
+</div>
